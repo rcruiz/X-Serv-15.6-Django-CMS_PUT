@@ -11,14 +11,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Pages',
+            name='Page',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('Name', models.CharField(max_length=32)),
-                ('Page', models.TextField()),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True, auto_created=True)),
+                ('name', models.CharField(max_length=64)),
+                ('page', models.TextField()),
             ],
-            options={
-            },
-            bases=(models.Model,),
         ),
     ]
