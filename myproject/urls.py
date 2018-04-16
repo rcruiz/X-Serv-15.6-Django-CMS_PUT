@@ -18,9 +18,9 @@ from django.contrib import admin
 from cms_put import views
 
 urlpatterns = [
-    url(r'^$', views.mostrar_todo, name='Mostrar paginas almacenadas'),
-    url(r'^(\d+)$', views.mostrar_id, name='Acceso a page por id'),
+    url(r'^$', views.mostrar_todo, name='muestra'),
+    url(r'^(\d+)$', views.mostrar_id, name='muestra_id'),
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^(\w+)$', views.contenido, name='Accede y modifica contenido'),
-    url(r'^(.*)', views.contenido, name='Accede y modifica contenido'),
+    url(r'^(.*)', views.contenido, name='actualiza'),
 ]
